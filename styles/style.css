@@ -416,6 +416,20 @@ nav {
     /* display: none; */
 }
 
+.oneupmenu-company-content {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.oneupmenu-company-items {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: start;
+    gap: 36px;
+}
+
 .oneupmenu-company-item {
     display: flex;
     align-items: center;
@@ -433,4 +447,59 @@ nav {
     font-size: 14px;
     line-height: 19.6px;
     color: #425B76;
+}
+
+.oneupmenu-company-cards {
+    display: flex;
+    gap: 40px;
+}
+
+.oneupmenu-resources-item-card-1 {
+    width: 370px;
+    height: 270px;
+    border: 1px solid #E4EDFF;
+    background: #F7F9FB;;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.oneupmenu-resources-item-card-1 h4 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+    color: #2D2340;
+}
+
+.oneupmenu-resources-item-card-2 {
+    width: 370px;
+    height: 270px;
+    border-radius: 8px;
+    background: #062B3A;
+    padding: 46px 29px;
+}
+
+.oneupmenu-resources-item-card-2 p {
+    color: #fff;
+    line-height: 22.4px;
+}
+
+.oneupmenu-resources-item-card-2-user {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 32px;
+}
+
+.oneupmenu-resources-item-card-2-user h5, .oneupmenu-resources-item-card-2-user p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.oneupmenu-resources-item-card-2-user p {
+    margin-top: 2px;
 }
