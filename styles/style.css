@@ -183,17 +183,14 @@ nav {
     border-radius: 8px;
 }
 
-.oneupmenu-products-left-btn:hover {
+.oneupmenu-products-left-btn:hover,
+.oneupmenu-btn-active {
     background: #E4EDFF;
-
-}
-
-.oneupmenu-products-left-btn:hover>.oneupmenu-products-angle {
     color: #3574E3;
 }
 
-
-.oneupmenu-products-left-btn:hover {
+.oneupmenu-products-left-btn:hover>.oneupmenu-products-angle,
+.oneupmenu-btn-active>.oneupmenu-products-angle {
     color: #3574E3;
 }
 

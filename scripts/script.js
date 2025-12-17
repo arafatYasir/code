@@ -87,4 +87,28 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+
+    // Product Tab Switching Logic
+    const tvBtn = document.querySelector('.oneupmenu-btn-tv');
+    const dashboardBtn = document.querySelector('.oneupmenu-btn-dashboard');
+    const tvContainer = document.querySelector('.oneupmenu-products-tv-container');
+    const dashboardContainer = document.querySelector('.oneupmenu-products-dashboard-container');
+
+    if (tvBtn && dashboardBtn && tvContainer && dashboardContainer) {
+        tvBtn.addEventListener('mouseenter', () => {
+            tvBtn.classList.add('oneupmenu-btn-active');
+            dashboardBtn.classList.remove('oneupmenu-btn-active');
+
+            tvContainer.style.display = 'block';
+            dashboardContainer.style.display = 'none';
+        });
+
+        dashboardBtn.addEventListener('mouseenter', () => {
+            dashboardBtn.classList.add('oneupmenu-btn-active');
+            tvBtn.classList.remove('oneupmenu-btn-active');
+
+            dashboardContainer.style.display = 'block';
+            tvContainer.style.display = 'none';
+        });
+    }
 });
