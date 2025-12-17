@@ -111,7 +111,7 @@
     }
 
     .oneupmenu-products-mobile {
-        display: block;
+        display: none;
     }
 
     .oneupmenu-products-mobile-options {
@@ -230,5 +230,50 @@
 
     .oneupmenu-products-mobile .oneupmenu-nav-buttons-mobile {
         margin-bottom: 20px;
+    }
+
+    /* ---- Solutions ---- */
+    .oneupmenu-solutions-mobile {
+        margin-top: 24px;
+        display: block;
+    }
+    .oneupmenu-solutions-mobile .oneupmenu-nav-buttons-mobile {
+        margin-bottom: 20px;
+    }
+
+    .oneupmenu-solutions-mobile .oneupmenu-products-mobile-card img {
+        bottom: 0;
+    }
+
+    .oneupmenu-outcomes-mobile {
+        background: #3574E3;
+        border-radius: 8px;
+        width: 100%;
+    }
+
+    .oneupmenu-outcomes-mobile h4 {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21.6px;
+    }
+
+    .oneupmenu-outcomes-mobile a {
+        color: #fff;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 22.5px;
+    }
+
+    .oneupmenu-solutions-item {
+        padding: 0 16px;
+    }
+
+    .oneupmenu-solutions-mobile .oneupmenu-products-mobile-options {
+        gap: 32px;
+    }
+
+    .oneupmenu-solutions-mobile .oneupmenu-products-mobile-card {
+        margin-top: 32px;
     }
 }
