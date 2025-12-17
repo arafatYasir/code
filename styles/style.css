@@ -500,6 +500,11 @@ nav {
     visibility: hidden;
 }
 
+.oneupmenu-resources-item-card-wrapper {
+    display: flex;
+    gap: 40px;
+}
+
 .oneupmenu-resources-item-card {
     background: #F0F7FF;
     width: 310px;
