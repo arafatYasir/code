@@ -10,6 +10,10 @@
     display: block;
 }
 
+header {
+    position: relative;
+}
+
 .oneupmenu-main-nav {
     background: #FBFBFB;
 }
@@ -94,7 +98,13 @@ nav {
     border-top: 1px solid #E4EDFF;
     border-bottom: 1px solid #E4EDFF;
     display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    background: #fff;
+    visibility: hidden;
 }
+
 .oneupmenu-products-bg {
     display: flex;
 }
@@ -104,6 +114,20 @@ nav {
     height: 495px;
     background: #F0F7FF;
     flex-shrink: 0;
+}
+
+.oneupmenu-dropdowns {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.oneupmenu-active-dropdown {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    visibility: visible !important;
 }
 
 .oneupmenu-products-bg-right {
@@ -150,7 +174,7 @@ nav {
 
 }
 
-.oneupmenu-products-left-btn:hover > .oneupmenu-products-angle {
+.oneupmenu-products-left-btn:hover>.oneupmenu-products-angle {
     color: #3574E3;
 }
 
@@ -193,7 +217,7 @@ nav {
     margin-top: 24px;
 }
 
-.oneupmenu-products-tv-wrapper > div {
+.oneupmenu-products-tv-wrapper>div {
     display: flex;
     align-items: start;
     gap: 6px;
@@ -263,7 +287,7 @@ nav {
     justify-content: space-between;
 }
 
-.oneupmenu-products-bottom > div {
+.oneupmenu-products-bottom>div {
     display: flex;
     align-items: center;
     gap: 27px;
@@ -297,6 +321,7 @@ nav {
 .oneupmenu-products-dashboard-container {
     display: none;
 }
+
 .oneupmenu-products-dashboard-container .oneupmenu-products-tv-right {
     background-color: #3574E3;
 }
@@ -307,6 +332,11 @@ nav {
     border-bottom: 1px solid #E4EDFF;
     padding: 40px 0;
     display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    background: #fff;
+    visibility: hidden;
 }
 
 .oneupmenu-solutions-content {
@@ -336,7 +366,7 @@ nav {
     line-height: 24px;
 }
 
-.oneupmenu-solutions-item > div:first-child {
+.oneupmenu-solutions-item>div:first-child {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -360,6 +390,11 @@ nav {
     border-bottom: 1px solid #E4EDFF;
     padding: 40px 0;
     display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    background: #fff;
+    visibility: hidden;
 }
 
 .oneupmenu-resources-item-card {
@@ -413,7 +448,12 @@ nav {
     border-top: 1px solid #E4EDFF;
     border-bottom: 1px solid #E4EDFF;
     padding: 40px 0;
-    /* display: none; */
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    background: #fff;
+    visibility: hidden;
 }
 
 .oneupmenu-company-content {
@@ -458,7 +498,7 @@ nav {
     width: 370px;
     height: 270px;
     border: 1px solid #E4EDFF;
-    background: #F7F9FB;;
+    background: #F7F9FB;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -494,7 +534,8 @@ nav {
     margin-top: 32px;
 }
 
-.oneupmenu-resources-item-card-2-user h5, .oneupmenu-resources-item-card-2-user p {
+.oneupmenu-resources-item-card-2-user h5,
+.oneupmenu-resources-item-card-2-user p {
     font-size: 16px;
     font-weight: 400;
     color: #fff;
