@@ -162,8 +162,8 @@ nav {
     border-top: 1px solid #E4EDFF;
     border-bottom: 1px solid #E4EDFF;
     display: none;
-    opacity: 0;
-    transform: translateY(-10px);
+    opacity: o;
+    transform: translateY(0);
     transition: opacity 0.3s ease, transform 0.3s ease;
     background: #fff;
     visibility: hidden;
@@ -203,7 +203,6 @@ nav {
 .oneupmenu-products-content {
     position: absolute;
     top: 40px;
-    left: 100px;
     display: flex;
     align-items: start;
     justify-content: space-between;
@@ -278,7 +277,7 @@ nav {
     margin-top: 24px;
 }
 
-.oneupmenu-products-tv-wrapper>div {
+.oneupmenu-products-tv-wrapper>a {
     display: flex;
     align-items: start;
     gap: 6px;
@@ -287,7 +286,7 @@ nav {
     border-radius: 5px;
 }
 
-.oneupmenu-products-tv-wrapper>div:hover {
+.oneupmenu-products-tv-wrapper>a:hover {
     background: #E4EDFF;
 }
 
@@ -396,6 +395,13 @@ nav {
     display: flex;
     align-items: center;
     gap: 16px;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 4px;
+}
+
+.oneupmenu-products-bottom a:hover {
+    border-bottom: 1px solid #3574E3;
 }
 
 .oneupmenu-products-integrations {
@@ -437,7 +443,7 @@ nav {
     display: flex;
     align-items: start;
     flex-direction: column;
-    gap: 32px;
+    gap: 31px;
     width: 250px;
 }
 
@@ -497,7 +503,6 @@ nav {
 .oneupmenu-resources-item-card {
     background: #F0F7FF;
     width: 310px;
-    height: 352px;
     border-radius: 8px;
     padding: 36px 32px;
 }
@@ -520,6 +525,12 @@ nav {
     display: inline-block;
     transition: all 0.3s ease;
 }
+
+.oneupmenu-resources-item-card a:hover {
+    scale: 1.05;
+    background: #3371DD;
+}
+
 .oneupmenu-resources-item-card.special-card {
     background: #0089E9;
     padding: 30px;
@@ -545,6 +556,7 @@ nav {
     background: #fff;
     color: #3574E3;
     border: 2px solid #fff;
+    scale: 1;
 }
 
 /* ---- Company ---- */

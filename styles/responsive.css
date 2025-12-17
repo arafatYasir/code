@@ -6,7 +6,7 @@
     line-height: 1;
 }
 
-@media screen and (max-width: 575.99px) {
+@media screen and (max-width: 991px) {
     .oneupmenu-main-nav {
         background: #fff;
     }
@@ -264,7 +264,8 @@
         padding: 12px 25px;
         display: inline-block;
         border-radius: 5px;
-        margin: 18px 0;
+        /* margin: 18px 0; */
+        margin-top: 18px;
     }
 
     .oneupmenu-products-mobile-card img {
@@ -284,6 +285,10 @@
     .oneupmenu-solutions-mobile {
         margin-top: 24px;
         display: none;
+    }
+
+    .oneupmenu-solutions-item-links {
+        gap: 20px;
     }
 
     .oneupmenu-solutions-mobile .oneupmenu-nav-buttons-mobile {
@@ -319,7 +324,7 @@
     }
 
     .oneupmenu-solutions-mobile .oneupmenu-products-mobile-options {
-        gap: 32px;
+        gap: 31px;
     }
 
     .oneupmenu-solutions-mobile .oneupmenu-products-mobile-card {
@@ -497,5 +502,162 @@
 
     .oneupmenu-dashboard-mobile .oneupmenu-nav-buttons-mobile {
         margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1100px) {
+    /* ---- Navbar ---- */
+    .oneupmenu-login-btn {
+        padding: 8px 16px;
+    }
+
+    .oneupmenu-booking-btn {
+        padding: 8px 16px;
+    }
+
+    .oneupmenu-nav-options {
+        gap: 18px;
+    }
+
+    .oneupmenu-resources-item-card a {
+        padding: 8px 16px;
+    }
+
+    .oneupmenu-resources-item-card.special-card a {
+        padding: 8px 16px;
+    }
+
+    .oneupmenu-products-left-btn {
+        gap: 12px;
+        padding-right: 10px;
+        font-size: 15px;
+    }
+
+    .oneupmenu-products-bg-left {
+        width: 300px;
+    }
+
+    .oneupmenu-products-tv {
+        gap: 6px;
+        justify-content: space-between;
+    }
+
+    .oneupmenu-products-tv-wrapper {
+        gap: 6px;
+    }
+
+    .oneupmenu-products-tv-right {
+        width: 270px;
+        height: 270px;
+        padding: 16px;
+        overflow: hidden;
+    }
+
+    .oneupmenu-products-tv-right img {
+        width: 267px;
+        height: 149px;
+        bottom: -20px;
+    }
+
+    .oneupmenu-products-bottom {
+        padding-right: 18px;
+        padding-left: 20px;
+    }
+
+    .oneupmenu-products-tv-wrapper {
+        grid-template-columns: repeat(2, 200px);
+    }
+
+    .oneupmenu-products-content {
+        gap: 40px;
+    }
+    .oneupmenu-products-bottom>div {
+        gap: 20px;
+    }
+
+    .oneupmenu-products-integrations {
+        gap: 8px;
+    }
+}
+
+@media screen and (min-width: 1101px) and (max-width: 1130px) {
+    .oneupmenu-products-bg-left {
+        width: 340px;
+    }
+
+    .oneupmenu-products-tv {
+        gap: 10px;
+    }
+
+    .oneupmenu-products-tv-wrapper {
+        gap: 10px;
+    }
+
+    .oneupmenu-products-left-btn {
+        gap: 14px;
+        padding-right: 12px;
+        font-size: 16px;
+    }
+
+    .oneupmenu-products-tv-right {
+        width: 290px;
+        height: 290px;
+        padding: 16px;
+        overflow: hidden;
+    }
+
+    .oneupmenu-products-tv-right img {
+        width: 282px;
+        height: 157px;
+        bottom: -10px;
+    }
+}
+
+@media screen and (min-width: 1131px) and (max-width: 1200px) {
+    .oneupmenu-products-bg-left {
+        width: 360px;
+    }
+
+    .oneupmenu-products-left-btn {
+        gap: 14px;
+        padding-right: 12px;
+    }
+
+    .oneupmenu-products-tv {
+        gap: 18px;
+    }
+
+    .oneupmenu-products-tv-wrapper {
+        gap: 18px;
+    }
+
+    .oneupmenu-products-tv-right {
+        width: 290px;
+        height: 290px;
+        padding: 16px;
+        overflow: hidden;
+    }
+
+    .oneupmenu-products-tv-right img {
+        width: 282px;
+        height: 157px;
+        bottom: -10px;
+    }
+}
+
+
+
+
+@media screen and (min-width: 1201px) and (max-width: 1320px) {
+    .oneupmenu-products-bg-left {
+        width: 400px;
+    }
+
+    .oneupmenu-products-tv {
+        gap: 18px;
+    }
+
+    .oneupmenu-products-tv-wrapper {
+        gap: 18px;
     }
 }
