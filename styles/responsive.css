@@ -84,7 +84,7 @@
         height: 100vh;
         /* padding-top: 60px; */
         /* Extra padding for top since navbar is hidden */
-        padding-bottom: 40px;
+        padding-bottom: 90px;
         z-index: 9999;
         /* Ensure it's above everything */
     }
@@ -98,7 +98,7 @@
     .oneupmenu-dashboard-mobile.oneupmenu-mobile-nav-active {
         display: flex;
         opacity: 1;
-        transform: translateY(0);
+        transform: none;
         visibility: visible;
     }
 
@@ -127,8 +127,20 @@
     .oneupmenu-nav-buttons-mobile {
         display: flex;
         gap: 16px;
-        margin-top: 48px;
         justify-content: center;
+        position: fixed;
+        /* Changed from sticky to fixed */
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 99999;
+        /* Ensure high z-index */
+        background: #fff;
+        padding: 16px 0;
+        box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+        /* Optional: adds subtle shadow to separate from content */
+        margin: 0;
+        /* Reset margins */
     }
 
     /* Hamburger and Cross Toggle */
@@ -159,6 +171,7 @@
         background: #fff;
         padding: 16px 0;
     }
+
 
     .oneupmenu-product-name svg {
         rotate: 90deg;
@@ -283,9 +296,7 @@
         height: 154px;
     }
 
-    .oneupmenu-products-mobile .oneupmenu-nav-buttons-mobile {
-        margin-bottom: 20px;
-    }
+
 
     /* ---- Solutions ---- */
     .oneupmenu-solutions-mobile {
@@ -297,9 +308,7 @@
         gap: 20px;
     }
 
-    .oneupmenu-solutions-mobile .oneupmenu-nav-buttons-mobile {
-        margin-bottom: 20px;
-    }
+
 
     .oneupmenu-solutions-mobile .oneupmenu-products-mobile-card img {
         bottom: 0;
@@ -415,9 +424,7 @@
         margin-top: 16px;
     }
 
-    .oneupmenu-resources-mobile .oneupmenu-nav-buttons-mobile {
-        margin-bottom: 20px;
-    }
+
 
     /* ---- Company ---- */
     .oneupmenu-company-mobile {
@@ -458,9 +465,7 @@
         height: 55px;
     }
 
-    .oneupmenu-company-mobile .oneupmenu-nav-buttons-mobile {
-        margin-bottom: 20px;
-    }
+
 
     .oneupmenu-company-mobile .oneupmenu-resources-item-card-2 {
         width: 100%;
@@ -506,12 +511,11 @@
         padding: 16px;
     }
 
-    .oneupmenu-dashboard-mobile .oneupmenu-nav-buttons-mobile {
-        margin-bottom: 20px;
-    }
+
 }
 
 @media screen and (min-width: 992px) and (max-width: 1100px) {
+
     /* ---- Navbar ---- */
     .oneupmenu-login-btn {
         padding: 8px 16px;
@@ -577,6 +581,7 @@
     .oneupmenu-products-content {
         gap: 40px;
     }
+
     .oneupmenu-products-bottom>div {
         gap: 20px;
     }
