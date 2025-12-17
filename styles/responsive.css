@@ -9,7 +9,7 @@
 @media screen and (max-width: 575.99px) {
     .oneupmenu-main-nav {
         background: #fff;
-        /* display: none; */
+        display: none !important;
     }
 
     /* Navbar */
@@ -229,7 +229,7 @@
     }
 
     .oneupmenu-products-mobile-card {
-        width: 280px;
+        width: 100%;
         min-height: 272px;
         background: #062B3A;
         position: relative;
@@ -315,6 +315,7 @@
     }
 
     .oneupmenu-solutions-mobile .oneupmenu-products-mobile-card {
+        width: 100%;
         margin-top: 32px;
     }
 
@@ -329,7 +330,7 @@
     }
 
     .oneupmenu-resources-mobile .oneupmenu-products-mobile-card {
-        width: 280px;
+        width: 100%;
         height: 244px;
         border-radius: 8px;
         background: #F0F7FF;
@@ -364,7 +365,7 @@
 
     .oneupmenu-products-mobile-card-2 {
         background: #0089E9;
-        width: 280px;
+        width: 100%;
         height: 264px;
         padding: 16px;
         border-radius: 8px;
@@ -397,5 +398,63 @@
 
     .oneupmenu-resources-mobile .oneupmenu-nav-buttons-mobile {
         margin-bottom: 20px;
+    }
+
+    /* ---- Company ---- */
+    .oneupmenu-company-mobile {
+        margin-top: 24px;
+        /* display: none; */
+    }
+
+    .oneupmenu-company-mobile .oneupmenu-company-items {
+        margin-top: 32px;
+        gap: 24px;
+    }
+
+    .oneupmenu-company-mobile .oneupmenu-resources-item-card-1 {
+        width: 100%;
+        height: 204px;
+        margin: 16px 0;
+    }
+
+    .oneupmenu-company-mobile .oneupmenu-resources-item-card-1 h4 {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 19.5px;
+    }
+
+    .oneupmenu-company-mobile .oneupmenu-resources-item-card-1 img:first-child {
+        width: 140px;
+        height: 40px;
+    }
+
+    .oneupmenu-company-mobile .oneupmenu-resources-item-card-1 .oneupmenu-company-awards {
+        display: flex;
+        align-items: center;
+    }
+    .oneupmenu-company-mobile .oneupmenu-resources-item-card-1 .oneupmenu-company-awards img {
+        flex-shrink: 0;
+        width: 50px;
+        height: 55px;
+    }
+
+    .oneupmenu-company-mobile .oneupmenu-nav-buttons-mobile {
+        margin-bottom: 20px;
+    }
+
+    .oneupmenu-company-mobile .oneupmenu-resources-item-card-2 {
+        width: 100%;
+        padding: 16px;
+        height: 220px;
+    }
+
+    .oneupmenu-company-mobile .oneupmenu-resources-item-card-2 p {
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    .oneupmenu-company-mobile .oneupmenu-resources-item-card-2 h5 {
+        font-size: 14px;
+        font-weight: 400;
     }
 }
