@@ -9,6 +9,7 @@
 @media screen and (max-width: 575.99px) {
     .oneupmenu-main-nav {
         background: #fff;
+        display: none;
     }
 
     /* Navbar */
@@ -91,5 +92,143 @@
 
     .oneupmenu-hamburger.oneupmenu-hamburger-hidden {
         display: none !important;
+    }
+
+    /* ---- Products ---- */
+    .oneupmenu-products-mobile {
+        margin-top: 24px;
+    }
+    .oneupmenu-product-name {
+        font-size: 15px;
+        color: #3574E3;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .oneupmenu-product-name svg {
+        rotate: 90deg;
+    }
+
+    .oneupmenu-products-mobile {
+        display: block;
+    }
+
+    .oneupmenu-products-mobile-options {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 24px;
+        margin-top: 40px;
+    }
+
+    .oneupmenu-products-mobile-option {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .oneupmenu-products-mobile-option h4 {
+        font-weight: 500;
+        color: #062B3A;
+        line-height: 19px;
+    }
+
+    .oneupmenu-products-mobile-option > div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .oneupmenu-products-mobile-option-img {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #E4EDFF;
+        border-radius: 4px;
+    }
+
+    .oneupmenu-products-mobile-integrations {
+        background: #F0F7FF;
+        border: 1px solid #E4EDFF;
+        border-radius: 8px;
+        padding: 16px;
+        margin-top: 28px;
+    }
+
+    .oneupmenu-products-mobile-integrations h4 {
+        font-size: 18px;
+        font-weight: 500;
+        color: #062B3A;
+        line-height: 21.6px;
+    }
+
+    .oneupmenu-products-mobile-integrations p {
+        font-size: 15px;
+        font-weight: 500;
+        color: #3574E3;
+        line-height: 22.5px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .oneupmenu-products-mobile-integrations svg {
+        rotate: -90deg;
+    }
+
+    .oneupmenu-products-mobile-integrations-img {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin: 16px 0;
+    }
+
+    .oneupmenu-products-mobile-card {
+        width: 280px;
+        min-height: 272px;
+        background: #062B3A;
+        position: relative;
+        margin-top: 16px;
+        margin-bottom: 16px;
+        border-radius: 8px;
+        padding: 18px 0 0 22px;
+        overflow: hidden;
+    }
+
+    .oneupmenu-products-mobile-card h4 {
+        font-size: 15px;
+        font-weight: 600;
+        color: #fff;
+        line-height: 19.5px;
+    }
+
+    .oneupmenu-products-mobile-card a {
+        font-size: 14px;
+        font-weight: 500;
+        color: #fff;
+        border: 2px solid #fff;
+        line-height: 19px;
+        padding: 12px 25px;
+        display: inline-block;
+        border-radius: 5px;
+        margin: 18px 0;
+    }
+
+    .oneupmenu-products-mobile-card img {
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 260px;
+        height: 154px;
+    }
+
+    .oneupmenu-products-mobile .oneupmenu-nav-buttons-mobile {
+        margin-bottom: 20px;
     }
 }
