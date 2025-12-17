@@ -67,7 +67,7 @@
     .oneupmenu-mobile-nav {
         top: 88px;
         height: calc(100vh - 88px);
-        padding-top: 24px;
+        /* padding-top: 24px; */
         padding-bottom: 24px;
     }
 
