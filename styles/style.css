@@ -36,12 +36,13 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 21px 0;
+    height: 88px;
 }
 
 .oneupmenu-nav-options {
     display: flex;
     gap: 32px;
+    height: 100%;
 }
 
 .oneupmenu-nav-options li {
@@ -49,11 +50,19 @@ nav {
     align-items: center;
     gap: 6.5px;
     cursor: pointer;
+    height: 100%;
+    position: relative;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom-color 0.3s ease;
 }
 
 .oneupmenu-nav-options li span {
     font-size: 15px;
 
+}
+
+.oneupmenu-nav-options li:hover {
+    border-bottom-color: #3574E3;
 }
 
 .oneupmenu-nav-options li:hover span {
