@@ -508,6 +508,11 @@ nav {
     gap: 40px;
 }
 
+.oneupmenu-company-awards {
+    display: flex;
+    gap: 14px;
+}
+
 .oneupmenu-resources-item-card-1 {
     width: 370px;
     height: 270px;
