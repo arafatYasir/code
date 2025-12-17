@@ -266,6 +266,10 @@
         overflow: hidden;
     }
 
+    .oneupmenu-products-mobile-card.oneupmenu-products-special-card {
+        margin-bottom: 16px;
+    }
+
     .oneupmenu-products-mobile-card h4 {
         font-size: 15px;
         font-weight: 600;
