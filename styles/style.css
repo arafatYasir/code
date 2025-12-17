@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    line-height: 1;
+}
+
+.oneupmenu-main-nav {
+    background: #FBFBFB;
+}
+
+.oneupmenu-container {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 21px 0;
+}
+
+.oneupmenu-nav-options {
+    display: flex;
+    gap: 32px;
+}
+
+.oneupmenu-nav-options li {
+    display: flex;
+    align-items: center;
+    gap: 6.5px;
+    cursor: pointer;
+}
+
+.oneupmenu-nav-options li span {
+    font-size: 15px;
+
+}
+
+.oneupmenu-nav-options li span:hover {
+    color: #3574E3;
+}
+
+.oneupmenu-nav-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.oneupmenu-login-btn {
+    font-size: 15px;
+    font-weight: 600;
+    color: #3574E3;
+    padding: 10px 24px;
+    border: 1px solid #3574E3;
+    border-radius: 5px;
+}
+
+.oneupmenu-booking-btn {
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    padding: 10px 24px;
+    background-color: #3574E3;
+    border-radius: 5px;
+}
+
+/* ---- oneupmenu-dropdowns ---- */
+
+/* ----- Products ---- */
+
+.oneupmenu-products {
+    position: relative;
+    border-top: 1px solid #E4EDFF;
+    border-bottom: 1px solid #E4EDFF;
+}
+.oneupmenu-products-bg {
+    display: flex;
+}
+
+.oneupmenu-products-bg-left {
+    width: 457px;
+    height: 495px;
+    background: #F0F7FF;
+    flex-shrink: 0;
+}
+
+.oneupmenu-products-bg-right {
+    width: 100%;
+    height: 495px;
+    background: #FBFBFB;
+}
+
+.oneupmenu-products-content {
+    /* padding: 40px 0; */
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.oneupmenu-products-left-btn {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    color: #062B3A;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 20px 8px 8px;
+    border-radius: 8px;
+}
+
+.oneupmenu-products-left-btn:hover {
+    background: #E4EDFF;
+
+}
+
+.oneupmenu-products-left-btn:hover > .oneupmenu-products-angle {
+    color: #3574E3;
+}
+
+
+.oneupmenu-products-left-btn:hover {
+    color: #3574E3;
+}
+
+.oneupmenu-products-left-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #E4EDFF;
+    border-radius: 4px;
+}
+
+/* ---- Products: TV ---- */
+.oneupmenu-products-tv {
+    display: flex;
+    align-items: start;
+    gap: 32px;
+}
+
+.oneupmenu-products-left {
+    width: 457px;
+    height: 495px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: start;
+    background: #F0F7FF;
+    padding-top: 40px;
+    padding-left: 100px;
+}
+
+.oneupmenu-products-right {
+    width: 100%;
+    padding-top: 40px;
+}
+
+.oneupmenu-products-tv-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #425B76;
+}
+
+.oneupmenu-products-tv-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 220px);
+    gap: 32px;
+    margin-top: 24px;
+}
+
+.oneupmenu-products-tv-wrapper > div {
+    display: flex;
+    align-items: start;
+    gap: 6px;
+}
+
+.oneupmenu-products-tv-wrapper img {
+    margin-top: 4px;
+}
+
+.oneupmenu-products-tv-wrapper h4 {
+    font-weight: 500;
+    color: #062B3A;
+    line-height: 150%;
+}
+
+.oneupmenu-products-tv-wrapper p {
+    font-size: 13px;
+    color: #425B76;
+    line-height: 130%;
+    margin-top: 4px;
+}
+
+.oneupmenu-products-tv-right {
+    background: #062B3A;
+    width: 311px;
+    height: 311px;
+    border-radius: 8px;
+    padding: 20px 27px 0 27px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.oneupmenu-products-tv-right h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 23.4px;
+}
+
+.oneupmenu-products-tv-right button {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22.4px;
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 13px 25px;
+    cursor: pointer;
+    margin: 16px 0;
+}
+
+.oneupmenu-products-tv-right img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
