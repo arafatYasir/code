@@ -116,13 +116,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburgerIcon = document.querySelector('.oneupmenu-hamburger');
     const crossIcon = document.querySelector('.oneupmenu-cross');
     const mobileNav = document.querySelector('.oneupmenu-mobile-nav');
+    const mainNavbar = document.querySelector('.oneupmenu-main-nav');
+
+    // Sub-menus
+    const subMenus = {
+        'product': document.querySelector('.oneupmenu-products-mobile'),
+        'solutions': document.querySelector('.oneupmenu-solutions-mobile'),
+        'resources': document.querySelector('.oneupmenu-resources-mobile')
+    };
+
+    // Triggers in the main mobile menu
+    const mobileTriggers = {
+        'product': document.querySelector('.oneupmenu-nav-options-mobile .oneupmenu-trigger-product'),
+        'solutions': document.querySelector('.oneupmenu-nav-options-mobile .oneupmenu-trigger-solutions'),
+        'resources': document.querySelector('.oneupmenu-nav-options-mobile .oneupmenu-trigger-resources')
+    };
 
     if (hamburgerIcon && crossIcon && mobileNav) {
         // Open mobile menu when hamburger is clicked
         hamburgerIcon.addEventListener('click', () => {
             // Show mobile nav with transition
-            mobileNav.style.display = 'block';
-            // Force reflow to trigger transition
+            mobileNav.style.display = 'flex'; // Changed to flex based on CSS
+            // Force reflow
             void mobileNav.offsetWidth;
             mobileNav.classList.add('oneupmenu-mobile-nav-active');
 
@@ -133,19 +148,80 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Close mobile menu when cross is clicked
         crossIcon.addEventListener('click', () => {
-            // Hide mobile nav with transition
-            mobileNav.classList.remove('oneupmenu-mobile-nav-active');
+            // Helper to close a specific menu element
+            const closeMenu = (element) => {
+                element.classList.remove('oneupmenu-mobile-nav-active');
+                setTimeout(() => {
+                    if (!element.classList.contains('oneupmenu-mobile-nav-active')) {
+                        element.style.display = 'none';
+                    }
+                }, 300);
+            };
 
-            // After transition, set display to none
-            setTimeout(() => {
-                if (!mobileNav.classList.contains('oneupmenu-mobile-nav-active')) {
-                    mobileNav.style.display = 'none';
-                }
-            }, 300); // Match the CSS transition duration
+            // Close main nav
+            closeMenu(mobileNav);
+
+            // Close any open sub-menus
+            Object.values(subMenus).forEach(subMenu => {
+                if (subMenu) closeMenu(subMenu);
+            });
 
             // Show hamburger and hide cross
             hamburgerIcon.classList.remove('oneupmenu-hamburger-hidden');
             crossIcon.classList.remove('oneupmenu-cross-active');
+
+            // Ensure navbar is visible (safety)
+            if (mainNavbar) mainNavbar.style.display = 'block';
+        });
+
+        // Handle Sub-menu opening
+        Object.keys(mobileTriggers).forEach(key => {
+            const trigger = mobileTriggers[key];
+            const subMenu = subMenus[key];
+
+            if (trigger && subMenu) {
+                trigger.addEventListener('click', (e) => {
+                    e.stopPropagation(); // Prevent bubbling if needed
+
+                    // Hide main nav list
+                    mobileNav.classList.remove('oneupmenu-mobile-nav-active');
+                    setTimeout(() => {
+                        if (!mobileNav.classList.contains('oneupmenu-mobile-nav-active')) {
+                            mobileNav.style.display = 'none';
+                        }
+                    }, 300);
+
+                    // Hide the TOP navbar
+                    if (mainNavbar) mainNavbar.style.display = 'none';
+
+                    // Show sub-menu
+                    subMenu.style.display = 'flex';
+                    void subMenu.offsetWidth; // Force reflow
+                    subMenu.classList.add('oneupmenu-mobile-nav-active');
+                });
+
+                // Handle Back Button in Sub-menu
+                const backBtn = subMenu.querySelector('.oneupmenu-product-name');
+                if (backBtn) {
+                    backBtn.addEventListener('click', () => {
+                        // Hide sub-menu
+                        subMenu.classList.remove('oneupmenu-mobile-nav-active');
+                        setTimeout(() => {
+                            if (!subMenu.classList.contains('oneupmenu-mobile-nav-active')) {
+                                subMenu.style.display = 'none';
+                            }
+                        }, 300);
+
+                        // Show TOP navbar again
+                        if (mainNavbar) mainNavbar.style.display = 'block';
+
+                        // Show main nav list
+                        mobileNav.style.display = 'flex';
+                        void mobileNav.offsetWidth; // Force reflow
+                        mobileNav.classList.add('oneupmenu-mobile-nav-active');
+                    });
+                }
+            }
         });
     }
 });

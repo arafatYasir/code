@@ -73,6 +73,10 @@ nav {
     display: none;
 }
 
+.oneupmenu-resources-mobile {
+    display: none;
+}
+
 .oneupmenu-nav-options li {
     display: flex;
     align-items: center;

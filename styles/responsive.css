@@ -9,7 +9,7 @@
 @media screen and (max-width: 575.99px) {
     .oneupmenu-main-nav {
         background: #fff;
-        display: none;
+        /* display: none; */
     }
 
     /* Navbar */
@@ -39,18 +39,56 @@
         display: none;
     }
 
-    /* ---- Mobile Navbar ---- */
-    .oneupmenu-mobile-nav {
+    /* ---- Mobile Navbar & Submenus Shared Styles ---- */
+    .oneupmenu-mobile-nav,
+    .oneupmenu-products-mobile,
+    .oneupmenu-solutions-mobile,
+    .oneupmenu-resources-mobile {
+        position: fixed;
+        left: 0;
+        width: 100%;
+        background: #fff;
         display: none;
         opacity: 0;
         transform: translateY(-10px);
         transition: opacity 0.3s ease, transform 0.3s ease;
         visibility: hidden;
+        z-index: 9998;
+        overflow-y: auto;
+
+        /* Flexbox to position buttons at bottom */
+        flex-direction: column;
+        justify-content: space-between;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    /* specific styles for main mobile nav */
+    .oneupmenu-mobile-nav {
+        top: 88px;
+        height: calc(100vh - 88px);
+        padding-top: 24px;
         padding-bottom: 24px;
     }
 
-    .oneupmenu-mobile-nav.oneupmenu-mobile-nav-active {
-        display: block;
+    /* specific styles for sub-menus (Full Screen) */
+    .oneupmenu-products-mobile,
+    .oneupmenu-solutions-mobile,
+    .oneupmenu-resources-mobile {
+        top: 0;
+        height: 100vh;
+        /* padding-top: 60px; */
+        /* Extra padding for top since navbar is hidden */
+        padding-bottom: 40px;
+        z-index: 9999;
+        /* Ensure it's above everything */
+    }
+
+    .oneupmenu-mobile-nav.oneupmenu-mobile-nav-active,
+    .oneupmenu-products-mobile.oneupmenu-mobile-nav-active,
+    .oneupmenu-solutions-mobile.oneupmenu-mobile-nav-active,
+    .oneupmenu-resources-mobile.oneupmenu-mobile-nav-active {
+        display: flex;
         opacity: 1;
         transform: translateY(0);
         visibility: visible;
@@ -98,6 +136,7 @@
     .oneupmenu-products-mobile {
         margin-top: 24px;
     }
+
     .oneupmenu-product-name {
         font-size: 15px;
         color: #3574E3;
@@ -106,6 +145,7 @@
         align-items: center;
         gap: 10px;
     }
+
     .oneupmenu-product-name svg {
         rotate: 90deg;
     }
@@ -135,7 +175,7 @@
         line-height: 19px;
     }
 
-    .oneupmenu-products-mobile-option > div {
+    .oneupmenu-products-mobile-option>div {
         display: flex;
         align-items: center;
         gap: 10px;
@@ -235,8 +275,9 @@
     /* ---- Solutions ---- */
     .oneupmenu-solutions-mobile {
         margin-top: 24px;
-        display: block;
+        display: none;
     }
+
     .oneupmenu-solutions-mobile .oneupmenu-nav-buttons-mobile {
         margin-bottom: 20px;
     }
@@ -275,5 +316,86 @@
 
     .oneupmenu-solutions-mobile .oneupmenu-products-mobile-card {
         margin-top: 32px;
+    }
+
+    /* `---- Resources ---- */
+    .oneupmenu-resources-mobile {
+        margin-top: 24px;
+        display: none;
+    }
+
+    .oneupmenu-resources-mobile .oneupmenu-solutions-item {
+        padding: 0;
+    }
+
+    .oneupmenu-resources-mobile .oneupmenu-products-mobile-card {
+        width: 280px;
+        height: 244px;
+        border-radius: 8px;
+        background: #F0F7FF;
+        border: 2px solid #E2EEFC;
+        padding: 16px;
+    }
+
+    .oneupmenu-resources-mobile .oneupmenu-products-mobile-card img {
+        position: static;
+        transform: none;
+        width: 110px;
+        height: 48px;
+    }
+
+    .oneupmenu-resources-mobile .oneupmenu-products-mobile-card p {
+        font-size: 14px;
+        font-weight: 400;
+        color: #062B3A;
+        line-height: 22.5px;
+        margin-top: 16px;
+    }
+
+    .oneupmenu-resources-mobile .oneupmenu-products-mobile-card a {
+        font-size: 15px;
+        font-weight: 600;
+        background: #3574E3;
+        color: #fff;
+        line-height: 22.5px;
+        padding: 10px 24px;
+        border-radius: 5px;
+    }
+
+    .oneupmenu-products-mobile-card-2 {
+        background: #0089E9;
+        width: 280px;
+        height: 264px;
+        padding: 16px;
+        border-radius: 8px;
+    }
+
+    .oneupmenu-products-mobile-card-2 img {
+        width: 160px;
+        height: 145px;
+    }
+
+    .oneupmenu-products-mobile-card-2 h4 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #fff;
+        line-height: 21.6px;
+    }
+
+    .oneupmenu-products-mobile-card-2 a {
+        font-size: 15px;
+        font-weight: 600;
+        background: transparent;
+        color: #fff;
+        border: 2px solid #fff;
+        line-height: 22.5px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        display: inline-block;
+        margin-top: 16px;
+    }
+
+    .oneupmenu-resources-mobile .oneupmenu-nav-buttons-mobile {
+        margin-bottom: 20px;
     }
 }
