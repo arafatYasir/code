@@ -93,7 +93,7 @@ nav {
     position: relative;
     border-top: 1px solid #E4EDFF;
     border-bottom: 1px solid #E4EDFF;
-    /* display: none; */
+    display: none;
 }
 .oneupmenu-products-bg {
     display: flex;
@@ -406,4 +406,31 @@ nav {
     color: #fff;
     border: 2px solid #fff;
     padding: 10px 20px;
+}
+
+/* ---- Company ---- */
+.oneupmenu-company {
+    border-top: 1px solid #E4EDFF;
+    border-bottom: 1px solid #E4EDFF;
+    padding: 40px 0;
+    /* display: none; */
+}
+
+.oneupmenu-company-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+}
+
+.oneupmenu-company-item h4 {
+    line-height: 22.4px;
+    color: #062B3A;
+    font-weight: 500;
+}
+
+.oneupmenu-company-item p {
+    font-size: 14px;
+    line-height: 19.6px;
+    color: #425B76;
 }
