@@ -91,13 +91,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Product Tab Switching Logic
     const tvBtn = document.querySelector('.oneupmenu-btn-tv');
     const dashboardBtn = document.querySelector('.oneupmenu-btn-dashboard');
+    const securityBtn = document.querySelector('.oneupmenu-btn-security');
     const tvContainer = document.querySelector('.oneupmenu-products-tv-container');
     const dashboardContainer = document.querySelector('.oneupmenu-products-dashboard-container');
 
-    if (tvBtn && dashboardBtn && tvContainer && dashboardContainer) {
+    if (tvBtn && dashboardBtn && securityBtn && tvContainer && dashboardContainer) {
         tvBtn.addEventListener('mouseenter', () => {
             tvBtn.classList.add('oneupmenu-btn-active');
             dashboardBtn.classList.remove('oneupmenu-btn-active');
+            securityBtn.classList.remove('oneupmenu-btn-active');
 
             tvContainer.style.display = 'block';
             dashboardContainer.style.display = 'none';
@@ -106,9 +108,20 @@ document.addEventListener('DOMContentLoaded', () => {
         dashboardBtn.addEventListener('mouseenter', () => {
             dashboardBtn.classList.add('oneupmenu-btn-active');
             tvBtn.classList.remove('oneupmenu-btn-active');
+            securityBtn.classList.remove('oneupmenu-btn-active');
 
             dashboardContainer.style.display = 'block';
             tvContainer.style.display = 'none';
+        });
+
+        securityBtn.addEventListener('mouseenter', () => {
+            securityBtn.classList.add('oneupmenu-btn-active');
+            tvBtn.classList.remove('oneupmenu-btn-active');
+            dashboardBtn.classList.remove('oneupmenu-btn-active');
+
+            // Hide both containers as requested (Security has no content yet)
+            tvContainer.style.display = 'none';
+            dashboardContainer.style.display = 'none';
         });
     }
 

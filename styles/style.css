@@ -335,6 +335,25 @@ nav {
     padding: 13px 25px;
     cursor: pointer;
     margin: 16px 0;
+    transition: all 0.3s ease;
+}
+
+.oneupmenu-products-tv-right button:hover {
+    background: #3574E3;
+    color: #fff;
+    border: 2px solid #3574E3;
+}
+
+.oneupmenu-products-dashboard-container .oneupmenu-products-tv-right button:hover {
+    background: #fff;
+    color: #062B3A;
+    border: 2px solid #fff;
+}
+
+.oneupmenu-solutions .oneupmenu-products-tv-right button:hover {
+    background: #fff;
+    color: #062B3A;
+    border: 2px solid #fff;
 }
 
 .oneupmenu-products-tv-right img {
@@ -499,8 +518,8 @@ nav {
     padding: 10px 24px;
     border-radius: 5px;
     display: inline-block;
+    transition: all 0.3s ease;
 }
-
 .oneupmenu-resources-item-card.special-card {
     background: #0089E9;
     padding: 30px;
@@ -519,6 +538,13 @@ nav {
     color: #fff;
     border: 2px solid #fff;
     padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.oneupmenu-resources-item-card.special-card a:hover {
+    background: #fff;
+    color: #3574E3;
+    border: 2px solid #fff;
 }
 
 /* ---- Company ---- */
