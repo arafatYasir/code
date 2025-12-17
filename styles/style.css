@@ -93,7 +93,7 @@ nav {
     position: relative;
     border-top: 1px solid #E4EDFF;
     border-bottom: 1px solid #E4EDFF;
-    display: none;
+    /* display: none; */
 }
 .oneupmenu-products-bg {
     display: flex;
@@ -171,7 +171,7 @@ nav {
 
 /* ---- Products: TV ---- */
 .oneupmenu-products-tv-container {
-    display: none; 
+    /* display: none;  */
 }
 
 .oneupmenu-products-tv {
@@ -359,7 +359,7 @@ nav {
     border-top: 1px solid #E4EDFF;
     border-bottom: 1px solid #E4EDFF;
     padding: 40px 0;
-    /* display: none; */
+    display: none;
 }
 
 .oneupmenu-resources-item-card {
@@ -368,4 +368,42 @@ nav {
     height: 352px;
     border-radius: 8px;
     padding: 36px 32px;
+}
+
+.oneupmenu-resources-item-card p {
+    margin: 32px 0;
+    color: #022B3A;
+    line-height: 25px;
+}
+
+.oneupmenu-resources-item-card a {
+    font-size: 15px;
+    font-weight: 600;
+    background: #3574E3;
+    color: #fff;
+    line-height: 25px;
+    cursor: pointer;
+    padding: 10px 24px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.oneupmenu-resources-item-card.special-card {
+    background: #0089E9;
+    padding: 30px;
+}
+
+.oneupmenu-resources-item-card.special-card p {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    margin: 8px 0;
+}
+
+.oneupmenu-resources-item-card.special-card a {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 20px;
 }
