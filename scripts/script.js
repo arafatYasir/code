@@ -111,4 +111,41 @@ document.addEventListener('DOMContentLoaded', () => {
             tvContainer.style.display = 'none';
         });
     }
+
+    // Mobile Menu Toggle Logic
+    const hamburgerIcon = document.querySelector('.oneupmenu-hamburger');
+    const crossIcon = document.querySelector('.oneupmenu-cross');
+    const mobileNav = document.querySelector('.oneupmenu-mobile-nav');
+
+    if (hamburgerIcon && crossIcon && mobileNav) {
+        // Open mobile menu when hamburger is clicked
+        hamburgerIcon.addEventListener('click', () => {
+            // Show mobile nav with transition
+            mobileNav.style.display = 'block';
+            // Force reflow to trigger transition
+            void mobileNav.offsetWidth;
+            mobileNav.classList.add('oneupmenu-mobile-nav-active');
+
+            // Hide hamburger and show cross
+            hamburgerIcon.classList.add('oneupmenu-hamburger-hidden');
+            crossIcon.classList.add('oneupmenu-cross-active');
+        });
+
+        // Close mobile menu when cross is clicked
+        crossIcon.addEventListener('click', () => {
+            // Hide mobile nav with transition
+            mobileNav.classList.remove('oneupmenu-mobile-nav-active');
+
+            // After transition, set display to none
+            setTimeout(() => {
+                if (!mobileNav.classList.contains('oneupmenu-mobile-nav-active')) {
+                    mobileNav.style.display = 'none';
+                }
+            }, 300); // Match the CSS transition duration
+
+            // Show hamburger and hide cross
+            hamburgerIcon.classList.remove('oneupmenu-hamburger-hidden');
+            crossIcon.classList.remove('oneupmenu-cross-active');
+        });
+    }
 });

@@ -45,6 +45,26 @@ nav {
     height: 100%;
 }
 
+.oneupmennu-mobile-nav {
+    display: none;
+}
+
+.oneupmenu-nav-options-mobile {
+    display: none;
+}
+
+.oneupmenu-nav-buttons-mobile {
+    display: none;
+}
+
+.oneupmenu-hamburger {
+    display: none;
+}
+
+.oneupmenu-cross {
+    display: none;
+}
+
 .oneupmenu-nav-options li {
     display: flex;
     align-items: center;
