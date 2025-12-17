@@ -61,6 +61,10 @@ nav {
 
 }
 
+.oneupmenu-nav-options li svg {
+    transition: transform 0.3s ease;
+}
+
 .oneupmenu-nav-options li:hover {
     border-bottom-color: #3574E3;
 }
@@ -71,6 +75,7 @@ nav {
 
 .oneupmenu-nav-options li:hover svg {
     color: #3574E3;
+    transform: rotate(180deg);
 }
 
 .oneupmenu-nav-buttons {
