@@ -403,7 +403,7 @@
     /* ---- Company ---- */
     .oneupmenu-company-mobile {
         margin-top: 24px;
-        /* display: none; */
+        display: none;
     }
 
     .oneupmenu-company-mobile .oneupmenu-company-items {
@@ -456,5 +456,37 @@
     .oneupmenu-company-mobile .oneupmenu-resources-item-card-2 h5 {
         font-size: 14px;
         font-weight: 400;
+    }
+
+    /* Products Tv */
+    .oneupmenu-tv-mobile {
+        margin-top: 24px;
+    }
+
+    .oneupmenu-tv-mobile .oneupmenu-products-tv-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    /* Products Dashbaord */
+    .oneupmenu-dashboard-mobile {
+        margin-top: 24px;
+    }
+
+    .oneupmenu-dashboard-mobile .oneupmenu-products-tv-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .oneupmenu-dashboard-mobile .oneupmenu-products-tv-wrapper {
+        gap: 20px;
+    }
+
+    .oneupmenu-dashboard-mobile .oneupmenu-products-mobile-card {
+        width: 100%;
+        background: #3574E3;
+        padding: 16px;
+    }
+
+    .oneupmenu-dashboard-mobile .oneupmenu-nav-buttons-mobile {
+        margin-bottom: 20px;
     }
 }

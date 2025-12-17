@@ -77,6 +77,14 @@ nav {
     display: none;
 }
 
+.oneupmenu-company-mobile {
+    display: none;
+}
+
+.oneupmenu-tv-mobile {
+    display: none;
+}
+
 .oneupmenu-nav-options li {
     display: flex;
     align-items: center;
