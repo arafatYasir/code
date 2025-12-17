@@ -423,8 +423,6 @@
         margin-top: 16px;
     }
 
-
-
     /* ---- Company ---- */
     .oneupmenu-company-mobile {
         margin-top: 24px;
@@ -670,8 +668,26 @@
     }
 }
 
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 1441px) and (max-width: 1799px) {
     .oneupmenu-products-bg-left {
-        width: 37.5%;
+        width: 35%;
+    }
+}
+
+@media screen and (min-width: 1800px) and (max-width: 2159px){
+    .oneupmenu-products-bg-left {
+        width: 37%;
+    }
+}
+
+@media screen and (min-width: 2160px) and (max-width: 2799px){
+    .oneupmenu-products-bg-left {
+        width: 38%;
+    }
+}
+
+@media screen and (min-width: 2800px) {
+    .oneupmenu-products-bg-left {
+        width: 42%;
     }
 }

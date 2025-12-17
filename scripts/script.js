@@ -33,8 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function openDropdown(key) {
         if (activeTimeout) clearTimeout(activeTimeout);
 
-        // Close others immediately needed? Or just switch.
-        // If we want smooth switch, we might want to close others immediately.
         Object.keys(dropdowns).forEach(k => {
             if (k !== key && dropdowns[k]) {
                 dropdowns[k].classList.remove('oneupmenu-active-dropdown');
