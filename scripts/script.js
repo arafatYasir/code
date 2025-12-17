@@ -118,18 +118,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileNav = document.querySelector('.oneupmenu-mobile-nav');
     const mainNavbar = document.querySelector('.oneupmenu-main-nav');
 
-    // Sub-menus
+    // Sub-menus (Level 2)
     const subMenus = {
         'product': document.querySelector('.oneupmenu-products-mobile'),
         'solutions': document.querySelector('.oneupmenu-solutions-mobile'),
-        'resources': document.querySelector('.oneupmenu-resources-mobile')
+        'resources': document.querySelector('.oneupmenu-resources-mobile'),
+        'company': document.querySelector('.oneupmenu-company-mobile')
     };
 
-    // Triggers in the main mobile menu
+    // Deep-menus (Level 3 - Inside Products)
+    const deepMenus = {
+        'tv': document.querySelector('.oneupmenu-tv-mobile'),
+        'dashboard': document.querySelector('.oneupmenu-dashboard-mobile')
+    };
+
+    // Triggers in the main mobile menu (Level 1 -> Level 2)
     const mobileTriggers = {
         'product': document.querySelector('.oneupmenu-nav-options-mobile .oneupmenu-trigger-product'),
         'solutions': document.querySelector('.oneupmenu-nav-options-mobile .oneupmenu-trigger-solutions'),
-        'resources': document.querySelector('.oneupmenu-nav-options-mobile .oneupmenu-trigger-resources')
+        'resources': document.querySelector('.oneupmenu-nav-options-mobile .oneupmenu-trigger-resources'),
+        'company': document.querySelector('.oneupmenu-nav-options-mobile .oneupmenu-trigger-company')
+    };
+
+    // Triggers in the products mobile menu (Level 2 -> Level 3)
+    const deepTriggers = {
+        'tv': document.querySelector('.oneupmenu-products-mobile .oneupmenu-trigger-tv'),
+        'dashboard': document.querySelector('.oneupmenu-products-mobile .oneupmenu-trigger-dashboard')
     };
 
     if (hamburgerIcon && crossIcon && mobileNav) {
@@ -166,6 +180,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (subMenu) closeMenu(subMenu);
             });
 
+            // Close any open deep-menus
+            Object.values(deepMenus).forEach(deepMenu => {
+                if (deepMenu) closeMenu(deepMenu);
+            });
+
             // Show hamburger and hide cross
             hamburgerIcon.classList.remove('oneupmenu-hamburger-hidden');
             crossIcon.classList.remove('oneupmenu-cross-active');
@@ -174,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (mainNavbar) mainNavbar.style.display = 'block';
         });
 
-        // Handle Sub-menu opening
+        // Handle Sub-menu opening (Level 1 -> Level 2)
         Object.keys(mobileTriggers).forEach(key => {
             const trigger = mobileTriggers[key];
             const subMenu = subMenus[key];
@@ -200,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     subMenu.classList.add('oneupmenu-mobile-nav-active');
                 });
 
-                // Handle Back Button in Sub-menu
+                // Handle Back Button in Sub-menu (Level 2 -> Level 1)
                 const backBtn = subMenu.querySelector('.oneupmenu-product-name');
                 if (backBtn) {
                     backBtn.addEventListener('click', () => {
@@ -219,6 +238,57 @@ document.addEventListener('DOMContentLoaded', () => {
                         mobileNav.style.display = 'flex';
                         void mobileNav.offsetWidth; // Force reflow
                         mobileNav.classList.add('oneupmenu-mobile-nav-active');
+                    });
+                }
+            }
+        });
+
+        // Handle Deep-level opening (Level 2 -> Level 3)
+        Object.keys(deepTriggers).forEach(key => {
+            const trigger = deepTriggers[key];
+            const deepMenu = deepMenus[key];
+            const parentMenu = subMenus['product']; // Parent is always products
+
+            if (trigger && deepMenu && parentMenu) {
+                trigger.addEventListener('click', (e) => {
+                    e.stopPropagation();
+
+                    // Hide Parent Menu (Products)
+                    parentMenu.classList.remove('oneupmenu-mobile-nav-active');
+                    setTimeout(() => {
+                        if (!parentMenu.classList.contains('oneupmenu-mobile-nav-active')) {
+                            parentMenu.style.display = 'none';
+                        }
+                    }, 300);
+
+                    // Ensure Navbar stays hidden (redundant but safe)
+                    if (mainNavbar) mainNavbar.style.display = 'none';
+
+                    // Show Deep Menu
+                    deepMenu.style.display = 'flex';
+                    void deepMenu.offsetWidth;
+                    deepMenu.classList.add('oneupmenu-mobile-nav-active');
+                });
+
+                // Handle Back Button in Deep-menu (Level 3 -> Level 2)
+                const backBtn = deepMenu.querySelector('.oneupmenu-product-name');
+                if (backBtn) {
+                    backBtn.addEventListener('click', () => {
+                        // Hide Deep Menu
+                        deepMenu.classList.remove('oneupmenu-mobile-nav-active');
+                        setTimeout(() => {
+                            if (!deepMenu.classList.contains('oneupmenu-mobile-nav-active')) {
+                                deepMenu.style.display = 'none';
+                            }
+                        }, 300);
+
+                        // Ensure Navbar stays hidden
+                        if (mainNavbar) mainNavbar.style.display = 'none';
+
+                        // Show Parent Menu (Products)
+                        parentMenu.style.display = 'flex';
+                        void parentMenu.offsetWidth;
+                        parentMenu.classList.add('oneupmenu-mobile-nav-active');
                     });
                 }
             }

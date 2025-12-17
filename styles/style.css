@@ -85,6 +85,10 @@ nav {
     display: none;
 }
 
+.oneupmenu-dashboard-mobile {
+    display: none;
+}
+
 .oneupmenu-nav-options li {
     display: flex;
     align-items: center;
@@ -131,6 +135,12 @@ nav {
     border: 1px solid #3574E3;
     border-radius: 5px;
     line-height: 24px;
+    transition: all 0.3s ease;
+}
+
+.oneupmenu-login-btn:hover {
+    background: #3574E3;
+    color: #fff;
 }
 
 .oneupmenu-booking-btn {
@@ -272,6 +282,13 @@ nav {
     display: flex;
     align-items: start;
     gap: 6px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.oneupmenu-products-tv-wrapper>div:hover {
+    background: #E4EDFF;
 }
 
 .oneupmenu-products-tv-wrapper img {
@@ -430,6 +447,16 @@ nav {
     gap: 24px;
 }
 
+.oneupmenu-solutions-item-links a {
+    padding: 8px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.oneupmenu-solutions-item-links a:hover {
+    background: #E4EDFF;
+}
+
 .oneupmenu-solutions-content .oneupmenu-products-tv-right {
     background: #3371DD;
 }
@@ -525,7 +552,14 @@ nav {
     display: flex;
     align-items: center;
     gap: 12px;
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+    width: 100%;
+}
 
+.oneupmenu-company-item:hover {
+    background: #E4EDFF;
 }
 
 .oneupmenu-company-item h4 {

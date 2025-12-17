@@ -9,7 +9,6 @@
 @media screen and (max-width: 575.99px) {
     .oneupmenu-main-nav {
         background: #fff;
-        display: none !important;
     }
 
     /* Navbar */
@@ -43,7 +42,10 @@
     .oneupmenu-mobile-nav,
     .oneupmenu-products-mobile,
     .oneupmenu-solutions-mobile,
-    .oneupmenu-resources-mobile {
+    .oneupmenu-resources-mobile,
+    .oneupmenu-company-mobile,
+    .oneupmenu-tv-mobile,
+    .oneupmenu-dashboard-mobile {
         position: fixed;
         left: 0;
         width: 100%;
@@ -74,7 +76,10 @@
     /* specific styles for sub-menus (Full Screen) */
     .oneupmenu-products-mobile,
     .oneupmenu-solutions-mobile,
-    .oneupmenu-resources-mobile {
+    .oneupmenu-resources-mobile,
+    .oneupmenu-company-mobile,
+    .oneupmenu-tv-mobile,
+    .oneupmenu-dashboard-mobile {
         top: 0;
         height: 100vh;
         /* padding-top: 60px; */
@@ -87,7 +92,10 @@
     .oneupmenu-mobile-nav.oneupmenu-mobile-nav-active,
     .oneupmenu-products-mobile.oneupmenu-mobile-nav-active,
     .oneupmenu-solutions-mobile.oneupmenu-mobile-nav-active,
-    .oneupmenu-resources-mobile.oneupmenu-mobile-nav-active {
+    .oneupmenu-resources-mobile.oneupmenu-mobile-nav-active,
+    .oneupmenu-company-mobile.oneupmenu-mobile-nav-active,
+    .oneupmenu-tv-mobile.oneupmenu-mobile-nav-active,
+    .oneupmenu-dashboard-mobile.oneupmenu-mobile-nav-active {
         display: flex;
         opacity: 1;
         transform: translateY(0);
@@ -432,6 +440,7 @@
         display: flex;
         align-items: center;
     }
+
     .oneupmenu-company-mobile .oneupmenu-resources-item-card-1 .oneupmenu-company-awards img {
         flex-shrink: 0;
         width: 50px;
