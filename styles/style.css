@@ -6,6 +6,10 @@
     line-height: 1;
 }
 
+.active {
+    display: block;
+}
+
 .oneupmenu-main-nav {
     background: #FBFBFB;
 }
@@ -48,7 +52,11 @@ nav {
 
 }
 
-.oneupmenu-nav-options li span:hover {
+.oneupmenu-nav-options li:hover span {
+    color: #3574E3;
+}
+
+.oneupmenu-nav-options li:hover svg {
     color: #3574E3;
 }
 
@@ -64,6 +72,7 @@ nav {
     padding: 10px 24px;
     border: 1px solid #3574E3;
     border-radius: 5px;
+    line-height: 24px;
 }
 
 .oneupmenu-booking-btn {
@@ -73,6 +82,7 @@ nav {
     padding: 10px 24px;
     background-color: #3574E3;
     border-radius: 5px;
+    line-height: 24px;
 }
 
 /* ---- oneupmenu-dropdowns ---- */
@@ -83,6 +93,7 @@ nav {
     position: relative;
     border-top: 1px solid #E4EDFF;
     border-bottom: 1px solid #E4EDFF;
+    display: none;
 }
 .oneupmenu-products-bg {
     display: flex;
@@ -102,10 +113,22 @@ nav {
 }
 
 .oneupmenu-products-content {
-    /* padding: 40px 0; */
+    position: absolute;
+    top: 40px;
+    left: 100px;
     display: flex;
     align-items: start;
     justify-content: space-between;
+    width: 100%;
+    max-width: 1240px;
+}
+
+.oneupmenu-products-left {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: start;
 }
 
 .oneupmenu-products-left-btn {
@@ -147,28 +170,14 @@ nav {
 }
 
 /* ---- Products: TV ---- */
+.oneupmenu-products-tv-container {
+    display: none; 
+}
+
 .oneupmenu-products-tv {
     display: flex;
     align-items: start;
     gap: 32px;
-}
-
-.oneupmenu-products-left {
-    width: 457px;
-    height: 495px;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    align-items: start;
-    background: #F0F7FF;
-    padding-top: 40px;
-    padding-left: 100px;
-}
-
-.oneupmenu-products-right {
-    width: 100%;
-    padding-top: 40px;
 }
 
 .oneupmenu-products-tv-title {
@@ -214,7 +223,6 @@ nav {
     border-radius: 8px;
     padding: 20px 27px 0 27px;
     position: relative;
-    flex-shrink: 0;
 }
 
 .oneupmenu-products-tv-right h4 {
@@ -242,4 +250,122 @@ nav {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.oneupmenu-products-bottom {
+    margin-top: 32px;
+    background: #F0F7FF;
+    border: 1px solid #E4EDFF;
+    border-radius: 8px;
+    padding: 12px 20px 12px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.oneupmenu-products-bottom > div {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+.oneupmenu-products-bottom h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #062B3A;
+    line-height: 21.6px;
+}
+
+.oneupmenu-products-bottom a {
+    font-size: 15px;
+    font-weight: 500;
+    color: #3574E3;
+    line-height: 22.5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.oneupmenu-products-integrations {
+    display: flex;
+    align-items: start;
+    gap: 16px;
+}
+
+/* ---- Products: Dashboard ---- */
+.oneupmenu-products-dashboard-container {
+    display: none;
+}
+.oneupmenu-products-dashboard-container .oneupmenu-products-tv-right {
+    background-color: #3574E3;
+}
+
+/* ---- Solutions ---- */
+.oneupmenu-solutions {
+    border-top: 1px solid #E4EDFF;
+    border-bottom: 1px solid #E4EDFF;
+    padding: 40px 0;
+    display: none;
+}
+
+.oneupmenu-solutions-content {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.oneupmenu-solutions-item {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 32px;
+    width: 250px;
+}
+
+.oneupmenu-solutions-item h4 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #425B76;
+    line-height: 21.6px;
+}
+
+.oneupmenu-solutions-item a {
+    color: #062B3A;
+    line-height: 24px;
+}
+
+.oneupmenu-solutions-item > div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.oneupmenu-solutions-item-links {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 24px;
+}
+
+.oneupmenu-solutions-content .oneupmenu-products-tv-right {
+    background: #3371DD;
+}
+
+
+/* ---- Resources ---- */
+.oneupmenu-resources {
+    border-top: 1px solid #E4EDFF;
+    border-bottom: 1px solid #E4EDFF;
+    padding: 40px 0;
+    /* display: none; */
+}
+
+.oneupmenu-resources-item-card {
+    background: #F0F7FF;
+    width: 310px;
+    height: 352px;
+    border-radius: 8px;
+    padding: 36px 32px;
 }
